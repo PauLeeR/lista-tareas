@@ -68,17 +68,31 @@ var miArreglo = [
 
 for (var i = 0; i < 10; i++) { //aqui tengo las primeras 10 objetos que saqué del arreglo json principal
  //miArreglo[i] = miArreglo[i].title;
-
- document.write ("<li>" + miArreglo[i].title + "</li>" + "<br>")
-};  //aquí imprimo en una lista los 10 objetos o tareas
+ document.write ("<li>"+ miArreglo[i].title +"</li>")
+};
+ //document.getElementbyId("show").innerHTML += ("<li>" + miArreglo[i].title + "</li>" + "<br>")  //aquí imprimo en una lista los 10 objetos  
 
 /*var arr = miArreglo.slice(0,10);
   arr.forEach(function(el){
   console.log(el);
   });*/
 function agregarTarea(){ //función que va a añadir más tareas a mi lista
- var lista = document.getElementbyId("lista");
- tareaInput = document.getElementbyId("tareaInput");
- btnNuevaT = document.getElementbyId("btn-añadir");
-};
+  var lista = document.getElementById("tareaInput").value;
+  var contarTarea = document.getElementsByClassName("tarea_lista");
+  contarTarea[0].innerHTML += "<li>"+lista +"</li>";
+  var nuevaT = document.getElementById("show");
+  
+
+  miArreglo.push(input.value);
+  
+  //input.value=""
+  
+}
+
+   
+
+
+
+
+
 
